@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makine Llogaritese jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        const nr1 = $('#nr1');
+        const nr2 = $('#nr2');
+        const sh = $('#sh');
+        $(() => {
+            nr1.change(() => sh.val($(this).val() + nr2.val()));
+            nr2.change(() => sh.val($(this).val() + nr1.val()));
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="nr1">#1</label>
+        <input type="number" id="nr1"><br>
+        <label for="nr2">#2</label>
+        <input type="number" id="nr2"><br>
+        <label for="sh">shuma</label>
+        <input type="text" id="sh">
+    </form>
+</body>
+</html>
